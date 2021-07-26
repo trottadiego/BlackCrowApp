@@ -1,0 +1,14 @@
+{
+  "name": "electronCurso",
+  "version": "1.0.0",
+  "description": "electron curso",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "dtrotta",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^13.1.7"
+  }
+}
