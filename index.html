@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-scr 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-scr 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="./styles.css">
     <title>BlackCrow</title>
 
 </head>
 <body>
     <h1>BlackCrow</h1>
-    <div class='mensajes-error'></div>
+    <!-- <div class='mensajes-error'></div> -->
 
     <section class="creacion-boton">
         <form class="creacion-boton-formulario">
-            <input type="text" class="creacion-boton-comando" placeholder="comando" required>
+            <div class="list"><input type="text" class="input" placeholder="comando" required></div>
+            <input type="text" class="input" placeholder="comando" required>
             <input type="submit" value="Crear" class="creacion-boton-crear" disabled>
         </form>
-
+        <input type="button" value="Seleccionar dispositivo" class="seleccion-dispositivo">
     </section>
     
-    <section class="botones">
+    <section class="botonardo">
         boton1 <span id='boton1'></span>boton2 <span id='boton2'></span>boton3 <span id='boton3'></span>
         <script src="renderer.js"></script>
     </section>
@@ -30,7 +33,20 @@
         <button class="eliminar-boton">Eliminar boton</button>
     </section>
     
- 
+
+    <div class="list">
+        <input type="text" class="input" placeholder="Add items in your list"/>
+        <span class="add">+</span>
+      </div>
+      <ul>
+        <li class="draggable" draggable="true">HTML</li>
+        <li class="draggable" draggable="true">CSS</li>
+        <li class="draggable" draggable="true">JavaScript</li>
+        <li class="draggable" draggable="true">PHP</li>
+        <li class="draggable" draggable="true">MySQL</li>
+      </ul>
+    </div>
     <script src="./renderer.js"></script>
+    <script src="./function.js"></script>
 </body>
 </html>
