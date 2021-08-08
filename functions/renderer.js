@@ -1,7 +1,8 @@
 //const shell = require('electron');
-const app = require('electron').remote; 
-const dialog = app.dialog;
-const fs = require('fs');
+var app = require('electron').remote; 
+var dialog = app.dialog;
+var fs = require('fs');
+import Sortable from 'sortablejs';
 
 // aca va el codigo psra configurar la ventana donde va la app
 class Base{
@@ -22,13 +23,15 @@ class Base{
         this.agregarEventListeners();
     }
 
+    
+
     agregarEventListeners(){
         // this.comando.addEventListener('keyup', ()=>{
         //     this.botonCrear.disabled = false;
         // });
 
         this.botonCrear.addEventListener('submit', this.crearComando.bind(this))
-        this.seleccionDispositivo.addEventListener('click', this.leerContenido)
+        this.seleccionDispositivo.addEventListener('click', this.seleccionarCarpeta)
     }
 
     crearComando(evento){
@@ -75,24 +78,19 @@ class Base{
         }, 5000);
     }
 
-    seleccionarCarpeta(){
-        dialog.showOpenDialog({
+    seleccionarCarpeta = async function(){
+        let path = await dialog.showOpenDialog({
             title:"Select a folder",
             properties: ["openDirectory"]
-        }, (folderPaths) => {
-            // folderPaths is an array that contains all the selected paths
-            if(fileNames === undefined){
-                console.log("No destination folder selected");
-                return;
-            }else{
-                console.log(folderPaths);
-            }
         });
+
+        console.log(path.filePaths)
     }
 
     leerContenido(){
         console.log('hola looocooooooooo');
         dialog.showOpenDialog((fileNames) => {
+            console.log('hola looocooooooooo');
             // fileNames is an array that contains all the selected
             if(fileNames === undefined){
                 console.log("No file selected");

@@ -1,0 +1,199 @@
+/* Code By Webdevtrick ( https://webdevtrick.com ) */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,800");
+body {
+  background-color: #202020;
+  margin: 0px; 
+}
+
+header h1 {
+  font-weight: normal;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  background-color: blueviolet;
+  margin-top: 0px;
+  /* font-size: 50px; */
+}
+
+body .list-butons {
+  background-color: black;
+  position: relative;
+  width: auto; 
+  height: auto;
+  padding: 10px;
+  margin-left: 10px;
+  /* margin: 5px; */
+  /* margin: auto; */
+  display: inline-block;
+  border-radius: 15px;
+}
+
+body .list-actions {
+  background-color: black;
+  position: top;
+  margin-top: 0px;
+  width: auto; 
+  height: auto;
+  padding: 10px;
+  /* margin: 5px; */
+  /* margin: auto; */
+  display: inline-block;
+  border-radius: 15px;
+}
+
+
+.list-butons .row {
+  width: auto;
+  height: auto;
+  padding: 0px;
+  display: block;
+  margin: auto;
+  /* padding-left: 10px;
+  padding: 30px; */
+  /* background-color: blueviolet; */
+  /* padding: 15px; */
+  /* margin: auto; */
+ 
+}
+
+.list-butons .row .draggable {
+  color: rgb(245, 237, 237);
+  background-color: blueviolet;
+  list-style-type: none;
+  display: inline-block;
+  height: auto;
+  /* margin: auto; */
+  margin: 10px;
+  padding: 30px;
+  border-radius: 8px;
+  
+  font-family: "Raleway", sans-serif;
+
+  cursor: move;
+  transition: all 200ms;
+  user-select: none;
+  /* position: relative; */
+  
+  /* font-weight: 800px; */
+  /* will-change: transform;
+  
+  font-family: "Raleway", sans-serif;
+  font-weight: 800px;
+  height: 50px;
+  width: 70px;
+
+  
+  margin: 100px;
+  background-color: white;
+  color: #212121;
+  
+  line-height: 3.2;
+  padding: 50px;
+  cursor: move;
+  transition: all 200ms;
+  user-select: none;
+  margin: 10px auto;
+  position: relative;
+   */
+
+}
+
+.list-butons .row .empty{
+  color: rgb(245, 237, 237);
+  background-color: none;
+  list-style-type: none;
+  display: inline-block;
+  height: auto;
+  border-style: solid;
+  border-color: white;
+  /* margin: auto; */
+  margin: 10px;
+  padding: 30px;
+  border-radius: 8px;
+  
+  font-family: "Raleway", sans-serif;
+
+  cursor: move;
+  transition: all 200ms;
+  user-select: none;
+}
+
+.list-actions .row {
+  width: auto;
+  height: auto;
+  padding: 0px;
+  display: inline;
+  margin: auto;
+  /* padding-left: 10px;
+  padding: 30px; */
+  /* background-color: blueviolet; */
+  /* padding: 15px; */
+  /* margin: auto; */
+ 
+}
+
+.list-actions .row .draggable {
+  color: rgb(245, 237, 237);
+  background-color: blueviolet;
+  list-style-type: none;
+  display: block;
+  height: auto;
+  /* margin: auto; */
+  margin: 10px;
+  padding: 10px 60px;
+  border-radius: 8px;
+  
+  font-family: "Raleway", sans-serif;
+
+  cursor: move;
+  transition: all 200ms;
+  user-select: none;
+  /* position: relative; */
+  
+  /* font-weight: 800px; */
+  /* will-change: transform;
+  
+  font-family: "Raleway", sans-serif;
+  font-weight: 800px;
+  height: 50px;
+  width: 70px;
+
+  
+  margin: 100px;
+  background-color: white;
+  color: #212121;
+  
+  line-height: 3.2;
+  padding: 50px;
+  cursor: move;
+  transition: all 200ms;
+  user-select: none;
+  margin: 10px auto;
+  position: relative;
+   */
+
+}
+
+body .row .draggable:after {
+  content: 'drag me';
+  /* right: 7px; */
+  font-size: 10px;
+  position: absolute;
+  cursor: pointer;
+  line-height: 5;
+  transition: all 200ms;
+  transition-timing-function: cubic-bezier(0.48, 0.72, 0.62, 1.5);
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+body .row .draggable:hover:after {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.over {
+  transform: scale(1.1, 1.1);
+}
+
+
